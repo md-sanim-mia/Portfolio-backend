@@ -6,7 +6,12 @@ import notFound from "./app/middlwares/notFound";
 import gobalErrorHandilers from "./app/middlwares/gobalErrorHandilers";
 const app: Application = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://md-sanim-mia.vercel.app", "http://localhost:3000"],
+    credentials: true,
+  })
+);
 
 app.use("/api/v1", router);
 app.get("/", (req: Request, res: Response) => {

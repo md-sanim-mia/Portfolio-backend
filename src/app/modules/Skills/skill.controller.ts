@@ -1,4 +1,4 @@
-import httpStatus from "http-status";
+import httpStatus from "http-status-codes";
 import { asyncCatch } from "../../utilitys/async.catch";
 import sendResponse from "../../utilitys/sendResponse";
 import { JwtPayload } from "jsonwebtoken";

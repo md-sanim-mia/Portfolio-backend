@@ -23,6 +23,7 @@ router.patch(
   auth("admin"),
   multerUpload.fields([{ name: "images" }]),
   (req: Request, res: Response, next: NextFunction) => {
+    
     req.body = JSON.parse(req.body.data);
     next();
   },
